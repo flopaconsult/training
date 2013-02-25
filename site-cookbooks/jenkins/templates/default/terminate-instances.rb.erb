@@ -1,0 +1,21 @@
+#!/usr/bin/ruby
+
+require 'rubygems'
+require 'fog'
+
+# Import EC2 credentials e.g. @aws_access_key_id and @aws_access_key_id
+
+# Set up a connection
+connection = Fog::Compute.new(
+	:provider => "AWS",
+    :aws_access_key_id => <% @aws_access_key_id -%>,
+    :aws_secret_access_key => <% @aws_secret_access_key -%> )
+
+# Get a list of all the running servers/instances
+instance_list = connection.servers.all
+
+num_instances = instance_list.length
+puts "We have " + num_instances.to_s()  + " servers"
+
+# Print out a table of instances with choice columns
+instance_list.table([:id, :flavor_id, :ip_address, :private_ip_address, :image_id ])

@@ -1,0 +1,31 @@
+#!/usr/bin/perl
+# nagios: -epn
+
+
+chdir "<%=node['cloudwatch']['aws_cloudwatch_home']%>/bin";
+open(F,"./lbnagioscheck.sh $ARGV[1] $ARGV[2] $ARGV[3]| tail -n 100 |");
+
+my $min_ok = $ARGV[0];
+
+my $s=0;
+my $count=0;
+while($line=<F>){
+  chop($line);
+  my @e = split /\s/, $line ;
+  $i = $e[3];
+  $s += $i ;
+  $count ++;
+}
+if($count<1){
+  print "ERROR: no lines\n";
+  exit(2);
+}
+my $m = sprintf("%.2f", $s / 2) ;
+
+if($m < $min_ok){
+  print "WARNING Average=$m\n";
+  exit(1);
+}else{
+  print "OK Average=$m\n";
+  exit(0);
+}

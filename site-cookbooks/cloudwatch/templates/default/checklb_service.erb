@@ -1,0 +1,8 @@
+define service {
+        service_description CheckLB_<%= @av_zone %>
+        hostgroup_name monitoring
+        check_command checklb_<%= @av_zone %>
+        use     default-service
+        contact_groups      admins
+}
+

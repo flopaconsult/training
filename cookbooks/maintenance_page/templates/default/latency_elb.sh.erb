@@ -1,0 +1,9 @@
+export JAVA_HOME=`/usr/sbin/update-java-alternatives -l | head -1 | awk '{print $3}'`
+export AWS_CLOUDWATCH_HOME=/opt/cloudwatch/CloudWatch-1.0.13.4/
+export PATH=$PATH:$AWS_CLOUDWATCH_HOME/bin
+export AWS_CREDENTIAL_FILE=/opt/cloudwatch/CloudWatch-1.0.13.4/bin/credentials.txt
+start_time=`date +"%Y-%m-%dT%H:%M:%S" --date="$1 minutes ago"`
+end_time=`date +"%Y-%m-%dT%H:%M:%S"` 
+echo ${start_time}
+echo ${end_time}
+$AWS_CLOUDWATCH_HOME/bin/mon-get-stats Latency --namespace "AWS/ELB" --dimensions "LoadBalancerName= <%=node['elb']['name']%>,AvailabilityZone=$3" --statistics "Average,Minimum,Maximum" --start-time ${start_time} --end-time ${end_time} --period $2 --headers 

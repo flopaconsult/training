@@ -1,0 +1,12 @@
+export AWS_ELB_HOME=<%=node['elb']['aws_elb_home']%>
+export PATH=$PATH:$AWS_ELB_HOME/bin
+export AWS_CREDENTIAL_FILE=<%=node['elb']['aws_elb_home']%>/bin/credentials.txt
+export JAVA_HOME=`/usr/sbin/update-java-alternatives -l | head -1 | awk '{print $3}'`
+export INSTANCE_ID=`curl -s http://169.254.169.254/latest/meta-data/instance-id`
+
+
+<% @elbs.each do |elb_name|  -%>
+echo "elb_deregister: <%=elb_name%>" 
+<%=node['elb']['aws_elb_home']%>/bin/elb-deregister-instances-from-lb <%=elb_name%> --instances $INSTANCE_ID --region <%=node['region']%> 
+<% end -%>
+

@@ -1,0 +1,8 @@
+export JAVA_HOME=<%=node['cloudwatch']['javahome']%>
+export PATH=$JAVA_HOME/bin:$PATH
+export AWS_CLOUDWATCH_HOME=<%=node['cloudwatch']['aws_cloudwatch_home']%>
+export PATH=$PATH:$AWS_CLOUDWATCH_HOME/bin
+export AWS_CREDENTIAL_FILE=<%=node['cloudwatch']['aws_cloudwatch_home']%>/bin/credentials.txt
+mytime=`date +"%Y-%m-%dT%H:%M:%S" --date="$1 minutes ago"`
+echo ${mytime}
+$AWS_CLOUDWATCH_HOME/bin/mon-get-stats RequestCount --namespace "AWS/ELB" --dimensions "LoadBalancerName=<%=node['elb']['name']%>,AvailabilityZone=$3" --statistics "SampleCount" --unit Count --start-time ${mytime} --period $2 --headers --region us-east-1

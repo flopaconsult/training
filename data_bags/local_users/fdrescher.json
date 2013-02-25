@@ -1,0 +1,15 @@
+{
+  "id": "fdrescher",
+  "password": "",
+  "groups": ["admin", "sysadmin", "monadmin"],
+  "home": "/home/fdrescher",
+  "shell": "/bin/bash",
+  "comment": "Florian Drescher",
+  "nagios": {
+    "pager": "",
+    "email": "florian.drescher@gmail.com"
+  },
+  "htpasswd": "{SHA}/i0Kels0lRtuw8RhhPHtPq4ZRZ0=",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEA2FaeSjQaabFItbQogZmm2M2jPmng32pE6en3OkOdsalG0pfXvFFeao3hZoKgYDXs0qePedBjd/0V0doyFZtHsTuupCL21oTAA2R7lA8ZMqvsuxd2uN8Z0ba6z9L1v7Apr2RyPhCX1RB8d9rjdw4Rxa+wmptx9F5SmE3Bv/evcbpiSHwD6nErqD5CfnlJsgNY0tPHMh1C3xD8+8I9/oDdSMbFUvWWWsSntlWHqd5uVkYFjGMkY3YxmM91ksTekwidBH821RZgcimpB0DQkNWl7Laa+Ll/eTL62uT82Uye8p32ucA2V6dQz/r63gQZouFjFtMcL73xAyIi0TemhqpWNTAlvnLWKekUS1rnZ7MxbGuwobFY1Kw9K+dINnqb5Zt/7prhnSoUBlmFHA4B3f7b7joPrgrLWB6GCmKqGz6rEhl7Xs6f1EsGmKlk5wXr4tfI8WcNc/bQO/Vt+7xJaMqcA2mfy3Evi7zvmmivOBDdE5mtTXl0k/G3R6WF0SyopOJziWJgovdnTx0CAhOmFXhcdyTnmIfyDR4JrnG1RlNYN0MsdrLrFp+2kqQyWSlRMciyWpPH52ehvZDBNle14dyInmhK2edgLtbYHJ7hM0TcliaUl/31iD0QFTvKCd9wKzje7p6ul3Yf9oHVd7mkIuxwEG5SrYbykYxZu2Ui9Sp/u6c= florian.drescher@gmail.com"
+}
+

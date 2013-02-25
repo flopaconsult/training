@@ -1,0 +1,15 @@
+{
+  "id": "icingaadmin",
+  "password": "",
+  "groups": ["sysadmin", "monadmin"],
+  "home": "/home/icingaadmin",
+  "shell": "/bin/bash",
+  "comment": "icingaadmin",
+  "nagios": {
+    "pager": "",
+    "email": "florian@gradientx.com"
+  },
+  "htpasswd": "{SHA}/i0Kels0lRtuw8RhhPHtPq4ZRZ0=",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAzsYqhSU4j5rNSmRLLJLgGgPGwxEc8hk5+A7ZKTx8B0PSYqPLdmous2SoEUwH4NXhYG/odC5EZ0AKxlc7Z814LFmHlbu0BSguN8quap/rAbHoGm/rBJa72irpTo06Pq2d9GRFY8bJUBpjJUK8hIX0qmK6cyXgzdNeXsLqXLsBS0hcgY2IHT2cvgAY3DFFBb2LuH3alxyMZ1LPkeEVjoeLZ5z1blOivn37fHoA3WjV1uaMYTPHDVBqGbv87RoTuNg/4aLxQ3q0kkExoJ1WIIE//tF7WI0LsScxm1q117KNFpOwHxSW59HzbZSYZJ6Y+qlRh3rInmjGH/+6aqD5jiLuP5bK+Y7Jcuj3cO0QDRtwTMdgB3OSmLdQM2C9uyDYCgzT72EkzG7TdbcBsn3ADZzZzSsjvXBKOrGz8mkdNI2W9LiE7iOJFKCYJ4sml1GNz85Ryig9Jt/5hSzlTmiLlDZOIF6XlKzgJ8ftIPMAksLgfzCbd8eqVHwGNdE8n53ymvrtQqqnHrEOIpseXqTqOLI1i0B39++/HmAEjQTFjv3XVPbTHw1hBQoqiPwlo1bVtht/RrkfJpNejzKdZ1PhCFhYvws/2ul1GrRFXPlEJzGbNjEOhK/DZn7c96YGk9ctCuoR0+31SZV0KayXjIIm6SZmltIQefkAnWOyN6QJgoUW0hE= fdrescher@gradientx.com"
+}
+
